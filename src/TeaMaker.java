@@ -6,7 +6,16 @@
 public class TeaMaker {
 
 	/* Figure out how to make a cup of tea using the classes below */
-
+	
+public static void main(String[] args) {
+	TeaBag tea = new TeaBag("Green");
+	tea.getFlavor();
+	Kettle ket = new Kettle();
+	ket.boil();
+	Cup cup = new Cup();
+	cup.makeTea(tea, ket.getWater());
+	}
+	
 }
 
 class TeaBag {
@@ -24,6 +33,11 @@ class TeaBag {
 
 	String getFlavor() {
 		return flavor;
+	}
+
+	public void makeTea() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
@@ -63,6 +77,7 @@ class Cup {
 			System.out.println("Can't make tea with cold water! ");
 	}
 
+	
 }
 
 
